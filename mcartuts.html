@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McArthur Combat Helmet</title>
+    <!-- Enlace a la hoja de estilos de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM/9fJDAyIzZ6lD1z3UegI53TgY/hqM9dKz3lk" crossorigin="anonymous">
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2E2A24; /* Fondo café oscuro */
+            color: #E5D8A8; /* Texto en tono dorado claro */
+            text-align: center;
+        }
+
+        /* Encabezado principal */
+        header {
+            background-color: #3B5323; /* Verde militar */
+            color: #E5D8A8; /* Texto dorado */
+            padding: 20px;
+            border-bottom: 4px solid #8C6A2F; /* Línea dorada */
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-transform: uppercase;
+        }
+
+        /* Sección de imagen principal */
+        .hero {
+            padding: 40px 0;
+            background-color: #4B5320; /* Fondo verde oliva */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hero img {
+            width: 300px; /* Ajusta el tamaño aquí */
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Sección de características */
+        .feature {
+            padding: 20px;
+            background-color: #4B5320; /* Verde oliva */
+            margin: 20px 15%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer; /* Cambia el cursor al pasar sobre el elemento */
+        }
+
+        .feature h3 {
+            color: #E5D8A8; /* Tono dorado */
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .feature h3 i {
+            margin-right: 10px; /* Espacio para los íconos */
+            font-size: 1.5em; /* Tamaño del ícono */
+        }
+
+        .feature-details {
+            display: none; /* Oculta el contenido de detalles inicialmente */
+            color: #E5D8A8; /* Tono dorado */
+            padding: 10px;
+            text-align: left;
+            background-color: #3B3A32; /* Fondo más oscuro para la pestaña */
+            border-radius: 8px; /* Bordes redondeados */
+            margin-top: 10px; /* Espacio entre el título y los detalles */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para profundidad */
+        }
+
+        /* Botón de compra */
+        .buy-now {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            color: #2E2A24; /* Texto oscuro */
+            background-color: #8C6A2F; /* Dorado oscuro */
+            text-decoration: none;
+            border-radius: 50px;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .buy-now:hover {
+            background-color: #D2B48C; /* Color más claro al pasar el mouse */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <h1>McArthur Combat Helmet</h1>
+    </header>
+
+    <!-- Imagen principal del casco en el centro -->
+    <section class="hero">
+        <img src="file:///C:/Users/benja/OneDrive/Desktop/image.png" alt="Combat Helmet"> <!-- Asegúrate de que la imagen esté en la misma carpeta -->
+    </section>
+
+    <!-- Sección de características del casco -->
+    <div class="feature" onclick="toggleDetails(0)">
+        <h3><i class="fas fa-eye"></i>Night Vision</h3>
+        <div class="feature-details" id="details-0">
+            <p>Nuestra avanzada visión nocturna permite navegar y participar de manera efectiva en condiciones de poca luz. Equipado con sensores de alta resolución y tecnología infrarroja, podrás ver con claridad, dándote la ventaja táctica en cualquier situación.</p>
+        </div>
+    </div>
+
+    <div class="feature" onclick="toggleDetails(1)">
+        <h3><i class="fas fa-brain"></i>AI Integration</h3>
+        <div class="feature-details" id="details-1">
+            <p>El casco cuenta con IA integrada que proporciona análisis de datos en tiempo real, optimizando tus procesos de toma de decisiones durante las misiones. Ayuda en la detección de amenazas y puede asistir en la navegación, asegurando que estés siempre un paso adelante de la competencia.</p>
+        </div>
+    </div>
+
+    <div class="feature" onclick="toggleDetails(2)">
+        <h3><i class="fas fa-recycle"></i>Recycled Materials</h3>
+        <div class="feature-details" id="details-2">
+            <p>Fabricado con materiales reciclados de alta calidad, este casco no solo minimiza el impacto ambiental, sino que también asegura durabilidad y resistencia. Nuestro compromiso con la sostenibilidad significa que puedes rendir al máximo mientras cuidas el planeta.</p>
+        </div>
+    </div>
+
+    <div class="feature" onclick="toggleDetails(3)">
+        <h3><i class="fas fa-user-md"></i>Ergonomic Design</h3>
+        <div class="feature-details" id="details-3">
+            <p>Diseñado con la comodidad en mente, el ajuste ergonómico del casco asegura que se pueda usar durante períodos prolongados sin molestias. Incluye correas ajustables y acolchado que se adapta a la forma de tu cabeza, permitiendo máxima movilidad y protección.</p>
+        </div>
+    </div>
+
+    <!-- Botón de "Comprar ahora" -->
+    <section>
+        <a href="#" class="buy-now">Buy Now</a>
+    </section>
+
+    <script>
+        function toggleDetails(index) {
+            const details = document.getElementById(`details-${index}`);
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "block"; // Muestra el contenido
+            } else {
+                details.style.display = "none"; // Oculta el contenido
+            }
+        }
+    </script>
+
+</body>
+</html>
